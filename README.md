@@ -23,4 +23,7 @@ Multiple domains (comma-separated)
 Reading from a text file
 `python sslchecker.py example.txt`
 
-*I do plan on adding to this so it accepts Arguments*
+<img src="example.png" alt="App Screenshot" width="600"/>
+
+*I do plan on adding to this so it accepts CLI Arguments*
+
