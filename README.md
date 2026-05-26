@@ -9,7 +9,7 @@ Features
 
 ## Installation
 ```
-git clone https://github.com/yourname/ssl-checker.git
+git clone https://github.com/Radr443/SSLChecker.git
 cd ssl-checker
 pip install -r requirements.txt
 ```
