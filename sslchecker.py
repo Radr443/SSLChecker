@@ -63,12 +63,21 @@ def check_ssl(domain):
                         )
                     )
     except ssl.SSLCertVerificationError as e:
-        print(
-            termcolor.colored(
-                f"SSL Error for {domain}: {e}",
-                "red"
+        if "expired" in str(e).lower():
+            print(
+                termcolor.colored(
+                    f"Certificate for {domain} is expired",
+                    "red"
+                )
             )
-        )
+        else:
+            print(
+                termcolor.colored(
+                    f"SSL Error for {domain}: {e}",
+                    "red"
+                )
+            )
+
     except Exception as e:
         print(
             termcolor.colored(
