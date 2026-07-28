@@ -95,26 +95,26 @@ try:
                 check_file(domain)
             else:
                 check_ssl(domain)
-    else:
-        while True:
-            domains = input(
-                "Enter domains manually supported by commas to search for multiple domains\nor provide a txt file with domains (ex: domains.txt OR example.com,example.org): "
-            ).strip()
-            if domains.endswith(".txt"):
-                check_file(domains)
-            else:
-                domain_list = [
-                    d.strip()
-                    for d in domains.split(",")
-                ]
-                for domain in domain_list:
-                    check_ssl(domain)
-            action = input(
-                "Type check to scan again or anything else to exit: "
-            )
+    # else:
+    #     while True:
+    #         domains = input(
+    #             "Enter domains manually supported by commas to search for multiple domains\nor provide a txt file with domains (ex: domains.txt OR example.com,example.org): "
+    #         ).strip()
+    #         if domains.endswith(".txt"):
+    #             check_file(domains)
+    #         else:
+    #             domain_list = [
+    #                 d.strip()
+    #                 for d in domains.split(",")
+    #             ]
+    #             for domain in domain_list:
+    #                 check_ssl(domain)
+    #         action = input(
+    #             "Type check to scan again or anything else to exit: "
+    # #         )
 
-            if action.lower() != "check":
-                sys.exit(0)
+    #         if action.lower() != "check":
+    #             sys.exit(0)
 
 except KeyboardInterrupt:
 
