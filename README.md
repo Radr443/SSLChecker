@@ -25,5 +25,5 @@ Reading from a text file
 
 <img src="example.png" alt="App Screenshot" width="600"/>
 
-*I do plan on adding to this so it accepts CLI Arguments*
+ ~I do plan on adding to this so it accepts CLI Arguments~
 
