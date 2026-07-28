@@ -89,32 +89,13 @@ def check_ssl(domain):
 # MAIN
 try:
     if len(sys.argv) > 1:
-        domains = sys.argv[1:]
-        for domain in domains:
-            if domain.endswith(".txt"):
-                check_file(domain)
+        for arg in sys.argv[1:]:
+            if arg.endswith(".txt"):
+                check_file(arg)
+                
             else:
-                check_ssl(domain)
-    # else:
-    #     while True:
-    #         domains = input(
-    #             "Enter domains manually supported by commas to search for multiple domains\nor provide a txt file with domains (ex: domains.txt OR example.com,example.org): "
-    #         ).strip()
-    #         if domains.endswith(".txt"):
-    #             check_file(domains)
-    #         else:
-    #             domain_list = [
-    #                 d.strip()
-    #                 for d in domains.split(",")
-    #             ]
-    #             for domain in domain_list:
-    #                 check_ssl(domain)
-    #         action = input(
-    #             "Type check to scan again or anything else to exit: "
-    # #         )
-
-    #         if action.lower() != "check":
-    #             sys.exit(0)
+                for domain in [d.strip() for d in arg.split(",")]:
+                    check_ssl(domain)
 
 except KeyboardInterrupt:
 
